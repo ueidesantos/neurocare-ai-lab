@@ -8,4 +8,6 @@
   <Folder Name="/tests/">
     <Project Path="tests/NeuroCare.UnitTests/NeuroCare.UnitTests.csproj" />
   </Folder>
+  <Folder Name="/web/" />
+  <Folder Name="/web/neurocare-web/" />
 </Solution>
