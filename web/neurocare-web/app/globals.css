@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Editorial, calm, clinical-trust palette
+     * 1 primary brand (deep teal ink) + 3 neutrals (paper, ink, stone) + 1 accent (signal)
+     */
+    --background: 40 33% 97%;          /* warm paper */
+    --foreground: 220 25% 12%;         /* deep ink */
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+    --muted: 40 14% 92%;
+    --muted-foreground: 220 8% 38%;
+    --border: 40 12% 86%;
+    --primary: 220 25% 12%;
+    --primary-foreground: 40 33% 97%;
+    --accent: 184 42% 24%;             /* deep clinical teal */
+    --accent-foreground: 40 33% 97%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 22% 8%;
+    --foreground: 40 20% 94%;
+    --card: 220 22% 10%;
+    --card-foreground: 40 20% 94%;
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 8% 64%;
+    --border: 220 14% 18%;
+    --primary: 40 20% 94%;
+    --primary-foreground: 220 22% 8%;
+    --accent: 184 38% 52%;
+    --accent-foreground: 220 22% 8%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Subtle paper grid for editorial sections */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}

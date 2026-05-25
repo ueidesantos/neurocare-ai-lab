@@ -1,2 +1,13 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/NeuroCare.Api/NeuroCare.Api.csproj" />
+    <Project Path="src/NeuroCare.Application/NeuroCare.Application.csproj" />
+    <Project Path="src/NeuroCare.Domain/NeuroCare.Domain.csproj" />
+    <Project Path="src/NeuroCare.Infrastructure/NeuroCare.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/NeuroCare.UnitTests/NeuroCare.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/web/" />
+  <Folder Name="/web/neurocare-web/" />
 </Solution>
