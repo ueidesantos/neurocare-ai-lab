@@ -1,6 +1,7 @@
 # Protótipo de Relatório Clínico - Clareza Cognitiva
 
 **AVISO IMPORTANTE:** Este relatório foi gerado por uma ferramenta de triagem para apoiar a conversa com o profissional de saúde. **Este documento NÃO é um diagnóstico.**
+Consulte o [Disclaimer Educacional e Uso Responsável de IA](../../DISCLAIMER.md) para mais detalhes sobre os limites deste projeto.
 
 ---
 
