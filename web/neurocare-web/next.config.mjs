@@ -7,4 +7,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfignpm
+export default nextConfig
