@@ -1,8 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd web/neurocare-web && npm install && npm run build",
-  "devCommand": "cd web/neurocare-web && npm run dev",
-  "installCommand": "cd web/neurocare-web && npm install",
-  "outputDirectory": "web/neurocare-web/.next",
-  "framework": "nextjs"
-}
