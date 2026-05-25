@@ -32,6 +32,7 @@ Este arquivo contém instruções e restrições obrigatórias para qualquer age
 - Antes de qualquer commit que altere lógica de triagem, verifique se as regras determinísticas estão cobertas por testes unitários.
 - Garanta que mensagens geradas para o relatório contenham o disclaimer de "Não diagnóstico".
 - Observe rigorosamente as diretrizes éticas em `docs/ethics/cfm-medical-ethics-context.md`.
+- Siga as diretrizes de segurança da **OWASP** e prioridades do **Gartner** detalhadas em `docs/security-risk-management.md`.
 
 ---
 *Este arquivo é a "consciência" do projeto para agentes automatizados.*
