@@ -1,0 +1,1023 @@
+Ueide, a melhor forma de transformar isso em MVP é **não começar pela IA**. Comece pela **jornada clínica segura**. A IA entra depois como camada de apoio, resumo e explicabilidade.
+
+A tese do produto deve ser:
+
+> **Uma plataforma de triagem cognitiva e organização clínica que ajuda pacientes, familiares e profissionais a identificar sinais de alerta, estruturar a história dos sintomas e levar um relatório útil para avaliação médica.**
+
+Isso é mais seguro do que “predição de Alzheimer”, porque Alzheimer hoje caminha para critérios biológicos com uso de biomarcadores, e não apenas sintomas respondidos em questionário. Os critérios revisados de 2024 da Alzheimer’s Association reforçam uma visão biológica da doença e incorporam avanços em biomarcadores, incluindo biomarcadores sanguíneos. ([PubMed][1])
+
+## 1. Visão do produto
+
+**Nome conceitual:** `Clareza Cognitiva`
+
+**Descrição:**
+
+> Plataforma digital de triagem cognitiva, educação em saúde e relatório assistido por IA para apoiar a identificação precoce de sinais de declínio cognitivo e orientar a busca por avaliação profissional.
+
+A promessa correta:
+
+> “Ajude sua família a organizar sinais de memória, comportamento e funcionalidade para uma conversa médica mais clara.”
+
+A promessa errada:
+
+> “Descubra sua chance de ter Alzheimer.”
+
+Essa diferença é crítica.
+
+## 2. Statement do problema
+
+Famílias percebem mudanças cognitivas, mas demoram para procurar ajuda porque não sabem diferenciar envelhecimento normal, estresse, depressão, sono ruim, efeitos de medicamentos ou sinais iniciais de demência.
+
+No Brasil, esse problema é ainda mais relevante porque há subdiagnóstico importante. O Relatório Nacional sobre Demência do Ministério da Saúde estimou prevalência relevante em pessoas idosas, e fontes ligadas ao relatório apontam alto subdiagnóstico no país. ([Biblioteca Virtual em Saúde][2])
+
+**Problema central do MVP:**
+
+> Pessoas e familiares não sabem quando uma queixa cognitiva merece avaliação médica, nem conseguem organizar bem a história para levar ao profissional.
+
+## 3. Público inicial recomendado
+
+Eu não começaria vendendo direto para o paciente com uma promessa de “risco de Alzheimer”. Isso aumenta risco ético, regulatório e emocional.
+
+O público inicial mais seguro:
+
+### Primário
+
+**Familiares/cuidadores de pessoas acima de 60 anos com queixas de memória, comportamento ou funcionalidade.**
+
+Por quê?
+
+Porque muitas vezes quem percebe a mudança não é o próprio paciente. É filho, cônjuge, cuidador ou familiar próximo.
+
+### Secundário
+
+**Clínicas de neurologia, geriatria, neuropsicologia e atenção primária.**
+
+Aqui o produto pode funcionar como intake pré-consulta.
+
+### Terceiro público possível
+
+**Operadoras, programas de cuidado e healthtechs de atenção primária.**
+
+Mas eu deixaria para fase posterior.
+
+## 4. Personas
+
+### Persona principal — Familiar cuidador
+
+**Nome:** Mariana, 42 anos
+**Contexto:** percebe que a mãe de 72 anos está esquecendo contas, repetindo perguntas e se confundindo com remédios.
+**Dor:** não sabe se é “coisa da idade” ou algo sério.
+**Necessidade:** organizar os sinais e saber se deve procurar médico.
+
+### Persona secundária — Paciente preocupado
+
+**Nome:** Roberto, 67 anos
+**Contexto:** sente lapsos de memória e medo de Alzheimer.
+**Dor:** ansiedade e vergonha.
+**Necessidade:** orientação sem alarmismo.
+
+### Persona profissional — Neurologista/geriatra
+
+**Nome:** Dra. Ana
+**Contexto:** recebe pacientes com relatos desorganizados.
+**Dor:** perde tempo entendendo início, progressão, impacto funcional e medicamentos.
+**Necessidade:** relatório claro, objetivo e clinicamente útil.
+
+## 5. Jobs to be Done
+
+Quando um familiar percebe sinais de esquecimento ou mudança de comportamento, ele quer:
+
+> “Entender se isso merece atenção, organizar os fatos e saber qual próximo passo tomar sem entrar em pânico.”
+
+Quando um profissional recebe um novo paciente, ele quer:
+
+> “Entender rapidamente a linha do tempo, os sintomas principais, impacto funcional e fatores confundidores.”
+
+Quando o paciente percebe sintomas, ele quer:
+
+> “Saber se devo procurar ajuda e como falar sobre isso sem medo ou vergonha.”
+
+## 6. Proposta de valor
+
+Para familiares:
+
+> “Transforme preocupações soltas em um relatório claro para conversar com um profissional.”
+
+Para pacientes:
+
+> “Receba orientação cuidadosa sobre sinais cognitivos, sem diagnóstico automático e sem alarmismo.”
+
+Para profissionais:
+
+> “Receba um resumo estruturado antes da consulta, com linha do tempo, sintomas, funcionalidade, fatores confundidores e pontos de atenção.”
+
+## 7. Escopo do MVP
+
+O MVP deve entregar pouco, mas entregar com segurança.
+
+### Deve ter
+
+1. Consentimento e aviso de não diagnóstico.
+2. Questionário estruturado.
+3. Coleta separada: paciente e familiar/cuidador.
+4. Linha do tempo dos sintomas.
+5. Domínios cognitivos: memória, atenção, linguagem, orientação, função executiva.
+6. Funcionalidade: finanças, remédios, casa, locomoção, trabalho, autocuidado.
+7. Comportamento: apatia, irritabilidade, desinibição, alucinações, mudança de personalidade.
+8. Fatores confundidores: depressão, ansiedade, sono, luto, álcool, medicamentos, dor, infecção, audição/visão.
+9. Sinais de alerta.
+10. Classificação de prioridade, não de diagnóstico.
+11. Relatório para consulta.
+12. Educação em saúde.
+13. Exportação em PDF.
+14. Trilha de auditoria.
+15. Política de privacidade e exclusão de dados.
+
+### Resultado possível
+
+Não use “baixo/médio/alto risco de Alzheimer” no MVP.
+
+Use:
+
+* **Sem alerta relevante nas respostas**
+* **Atenção recomendada**
+* **Avaliação profissional recomendada**
+* **Avaliação profissional com prioridade**
+
+Isso reduz alarmismo e evita promessa diagnóstica.
+
+## 8. Anti-escopo
+
+Fora do MVP:
+
+* diagnóstico de Alzheimer;
+* cálculo percentual de risco individual;
+* interpretação de exame;
+* recomendação direta de medicação;
+* prescrição de exames;
+* integração com laboratório;
+* biomarcadores;
+* prontuário médico completo;
+* teleconsulta;
+* modelo preditivo treinado;
+* classificação “você tem Alzheimer”;
+* integração com plano de saúde;
+* wearable;
+* app mobile nativo.
+
+O MVP deve ser web, simples, seguro e validável.
+
+## 9. Jornada completa do usuário
+
+### Etapa 1 — Entrada
+
+Usuário acessa a plataforma e escolhe:
+
+* “Estou respondendo sobre mim”
+* “Estou respondendo sobre um familiar”
+* “Sou profissional de saúde”
+
+Mensagem inicial:
+
+> “Esta ferramenta não fornece diagnóstico. Ela ajuda a organizar sinais cognitivos e funcionais para apoiar uma avaliação profissional.”
+
+### Etapa 2 — Consentimento
+
+Coletar aceite explícito:
+
+* uso dos dados;
+* finalidade;
+* possibilidade de exclusão;
+* aviso de dados sensíveis;
+* limitação clínica.
+
+Dados de saúde são dados pessoais sensíveis pela LGPD, e a lei estabelece regras para tratamento de dados pessoais inclusive em meios digitais. ([Planalto][3])
+
+### Etapa 3 — Perfil básico
+
+Coletar:
+
+* idade;
+* escolaridade;
+* cidade/estado;
+* quem está respondendo;
+* relação com o paciente;
+* se já existe diagnóstico;
+* se já faz acompanhamento;
+* principais preocupações.
+
+### Etapa 4 — Queixa principal
+
+Perguntas:
+
+* “O que motivou você a buscar esta avaliação?”
+* “Quando percebeu o primeiro sinal?”
+* “Os sintomas pioraram, melhoraram ou oscilam?”
+* “Houve mudança súbita ou progressiva?”
+
+Mudança súbita deve acionar alerta para avaliação médica rápida, porque nem toda confusão é Alzheimer; pode haver AVC, delirium, infecção, efeito medicamentoso ou outras causas.
+
+### Etapa 5 — Questionário cognitivo
+
+Blocos:
+
+* memória recente;
+* repetição de perguntas;
+* perda de objetos;
+* esquecer compromissos;
+* dificuldade com palavras;
+* desorientação;
+* dificuldade com tarefas;
+* julgamento financeiro;
+* atenção;
+* planejamento;
+* mudança de comportamento.
+
+### Etapa 6 — Funcionalidade
+
+Perguntas sobre:
+
+* pagar contas;
+* administrar remédios;
+* cozinhar;
+* fazer compras;
+* usar transporte;
+* cuidar da casa;
+* dirigir;
+* autocuidado;
+* trabalho;
+* uso de celular/banco digital.
+
+A funcionalidade é central porque demência envolve impacto na vida diária, não apenas queixa subjetiva de memória.
+
+### Etapa 7 — Fatores confundidores
+
+Perguntar sobre:
+
+* depressão;
+* ansiedade;
+* insônia;
+* apneia/sono ruim;
+* luto recente;
+* uso de álcool;
+* medicamentos sedativos;
+* dor crônica;
+* infecção recente;
+* queda;
+* perda auditiva;
+* perda visual;
+* isolamento social.
+
+Esses fatores não “descartam” demência, mas podem explicar ou agravar sintomas.
+
+### Etapa 8 — Sinais de alerta
+
+Exemplos:
+
+* piora rápida;
+* confusão súbita;
+* alucinações;
+* quedas frequentes;
+* perda importante de autonomia;
+* risco de se perder;
+* erro grave com medicação;
+* risco financeiro;
+* agressividade nova;
+* sintomas neurológicos focais;
+* ideação suicida.
+
+Alguns desses sinais devem orientar busca médica prioritária ou serviço de urgência, dependendo da gravidade.
+
+### Etapa 9 — Classificação de prioridade
+
+A plataforma não diz “Alzheimer provável”.
+
+Ela diz:
+
+> “As respostas indicam necessidade de avaliação profissional.”
+
+Níveis:
+
+| Nível | Nome                     | Significado                                     |
+| ----- | ------------------------ | ----------------------------------------------- |
+| 0     | Sem alerta evidente      | Sem sinais relevantes nas respostas             |
+| 1     | Atenção                  | Há queixas, mas sem impacto funcional claro     |
+| 2     | Avaliação recomendada    | Há sintomas cognitivos ou funcionais relevantes |
+| 3     | Avaliação com prioridade | Há sinais de alerta, piora importante ou risco  |
+
+### Etapa 10 — Relatório
+
+O relatório deve conter:
+
+* quem respondeu;
+* motivo da avaliação;
+* idade e contexto;
+* linha do tempo;
+* sintomas principais;
+* impacto funcional;
+* fatores confundidores;
+* sinais de alerta;
+* perguntas para o médico;
+* próximos passos sugeridos;
+* aviso de não diagnóstico.
+
+## 10. Jornada do familiar/cuidador
+
+A jornada do cuidador deve ser acolhedora, mas objetiva:
+
+1. “Estou preocupado com alguém.”
+2. Informa relação com a pessoa.
+3. Descreve o que percebeu.
+4. Marca mudanças em memória, comportamento e funcionalidade.
+5. Informa exemplos concretos.
+6. Gera relatório.
+7. Recebe orientação de como conversar com o familiar.
+8. Recebe sugestão de procurar profissional, se aplicável.
+
+Um diferencial forte seria permitir registrar **exemplos reais**:
+
+> “Minha mãe esqueceu o gás ligado.”
+> “Meu pai pagou a mesma conta três vezes.”
+> “Minha esposa começou a se perder em caminhos conhecidos.”
+
+A IA pode transformar esses relatos em uma linha do tempo clara.
+
+## 11. Jornada do profissional de saúde
+
+No MVP, pode ser simples:
+
+1. Profissional recebe PDF do paciente.
+2. Visualiza resumo estruturado.
+3. Confere sintomas e funcionalidade.
+4. Usa como apoio para anamnese.
+5. Não depende do sistema para decisão clínica.
+
+Fase 2:
+
+* portal do profissional;
+* dashboard de pacientes;
+* comentários;
+* status;
+* validação de triagem.
+
+## 12. Fluxos principais da aplicação
+
+### Fluxo 1 — Triagem por familiar
+
+```text
+Landing page
+→ Aviso de não diagnóstico
+→ Consentimento
+→ Perfil do paciente
+→ Queixa principal
+→ Questionário cognitivo
+→ Funcionalidade
+→ Fatores confundidores
+→ Sinais de alerta
+→ Classificação de prioridade
+→ Relatório PDF
+```
+
+### Fluxo 2 — Triagem pelo próprio paciente
+
+```text
+Landing page
+→ Consentimento
+→ Autoavaliação
+→ Sintomas percebidos
+→ Impacto na rotina
+→ Fatores de saúde
+→ Orientação
+→ Relatório
+```
+
+### Fluxo 3 — Intake de clínica
+
+```text
+Clínica envia link
+→ Paciente/familiar responde antes da consulta
+→ Sistema gera resumo
+→ Profissional acessa relatório
+→ Consulta começa com dados organizados
+```
+
+## 13. Backlog inicial
+
+### Épico 1 — Consentimento e segurança
+
+Features:
+
+* tela de consentimento;
+* aviso de não diagnóstico;
+* termos de uso;
+* política de privacidade;
+* solicitação de exclusão de dados;
+* logs de aceite.
+
+### Épico 2 — Questionário clínico estruturado
+
+Features:
+
+* perfil do paciente;
+* queixa principal;
+* domínios cognitivos;
+* funcionalidade;
+* comportamento;
+* fatores confundidores;
+* sinais de alerta.
+
+### Épico 3 — Motor de triagem
+
+Features:
+
+* regras determinísticas;
+* pesos por domínio;
+* classificação de prioridade;
+* explicação do resultado;
+* bloqueio de linguagem diagnóstica.
+
+### Épico 4 — Relatório
+
+Features:
+
+* resumo executivo;
+* linha do tempo;
+* sintomas por domínio;
+* fatores confundidores;
+* sinais de alerta;
+* perguntas para o médico;
+* PDF.
+
+### Épico 5 — IA assistiva
+
+Features:
+
+* resumo narrativo;
+* organização de relatos livres;
+* geração de perguntas para consulta;
+* revisão de linguagem não alarmista;
+* checagem de termos proibidos.
+
+### Épico 6 — Auditoria e observabilidade
+
+Features:
+
+* logs de acesso;
+* rastreio de versão do questionário;
+* versão das regras;
+* versão do prompt;
+* histórico de geração do relatório;
+* telemetria.
+
+## 14. Regras de negócio
+
+Exemplos iniciais:
+
+1. O sistema nunca pode exibir diagnóstico.
+2. O sistema nunca pode afirmar probabilidade individual de Alzheimer no MVP.
+3. Toda saída deve conter aviso de não substituição médica.
+4. Mudança súbita de confusão deve gerar alerta de avaliação médica prioritária.
+5. Impacto funcional relevante deve elevar nível de atenção.
+6. Queixa cognitiva sem impacto funcional deve permanecer como atenção, não suspeita diagnóstica.
+7. Sinais de risco à segurança devem elevar prioridade.
+8. Fatores confundidores devem aparecer no relatório.
+9. Se houver ideação suicida, violência ou risco imediato, orientar busca de emergência.
+10. Recomendações de exames devem ser escritas como “converse com um profissional sobre”, nunca como prescrição.
+
+## 15. Requisitos funcionais
+
+| ID   | Requisito                                        |
+| ---- | ------------------------------------------------ |
+| RF01 | Permitir criar uma triagem cognitiva             |
+| RF02 | Permitir responder como paciente ou familiar     |
+| RF03 | Coletar consentimento antes das perguntas        |
+| RF04 | Coletar perfil básico e contexto                 |
+| RF05 | Coletar queixa principal                         |
+| RF06 | Coletar sintomas cognitivos por domínio          |
+| RF07 | Coletar impacto funcional                        |
+| RF08 | Coletar fatores confundidores                    |
+| RF09 | Identificar sinais de alerta                     |
+| RF10 | Classificar prioridade de avaliação              |
+| RF11 | Gerar relatório estruturado                      |
+| RF12 | Gerar PDF                                        |
+| RF13 | Permitir exclusão dos dados                      |
+| RF14 | Registrar versão das regras usadas               |
+| RF15 | Registrar versão do prompt usado pela IA         |
+| RF16 | Bloquear linguagem diagnóstica                   |
+| RF17 | Exibir orientação responsável de próximos passos |
+
+## 16. Requisitos não funcionais
+
+| Categoria          | Requisito                                                            |
+| ------------------ | -------------------------------------------------------------------- |
+| Segurança          | Criptografia em trânsito e repouso                                   |
+| Privacidade        | Minimização de dados                                                 |
+| LGPD               | Consentimento, finalidade, retenção e exclusão                       |
+| Auditoria          | Logs de acesso e alteração                                           |
+| Explicabilidade    | Resultado deve mostrar quais fatores influenciaram a prioridade      |
+| Disponibilidade    | MVP pode começar simples, mas com boa confiabilidade                 |
+| Observabilidade    | Logs estruturados, métricas e tracing                                |
+| Usabilidade        | Linguagem simples, acessível e sem jargão                            |
+| Acessibilidade     | Fonte legível, contraste, navegação clara                            |
+| Governança clínica | Versionamento de questionários, regras e conteúdos                   |
+| Segurança da IA    | Prompts versionados, output guardrails e revisão de termos proibidos |
+
+## 17. Critérios de segurança clínica
+
+A plataforma deve diferenciar:
+
+### Triagem
+
+> “Há sinais que merecem atenção?”
+
+### Orientação
+
+> “Que tipo de profissional procurar e que informações levar?”
+
+### Diagnóstico
+
+> “Qual doença a pessoa tem?”
+
+O MVP só faz **triagem e orientação**.
+
+Nunca faz diagnóstico.
+
+## 18. Como comunicar risco sem gerar pânico
+
+Evite:
+
+* “alto risco de Alzheimer”;
+* “provável demência”;
+* “sinais graves de Alzheimer”;
+* “chance elevada de desenvolver a doença”.
+
+Prefira:
+
+* “suas respostas indicam sinais que merecem avaliação profissional”;
+* “há mudanças funcionais que justificam conversar com um médico”;
+* “este resultado não é diagnóstico”;
+* “muitas condições podem causar sintomas parecidos e precisam ser avaliadas”.
+
+Exemplo de saída segura:
+
+> “As respostas indicam mudanças de memória e rotina que merecem avaliação profissional. Isso não significa Alzheimer. Sono, humor, medicamentos, alterações metabólicas e outras condições também podem influenciar cognição.”
+
+## 19. Como estruturar o questionário inicial
+
+### Bloco A — Contexto
+
+* Quem está respondendo?
+* Idade da pessoa avaliada.
+* Escolaridade.
+* Mora sozinha?
+* Já tem diagnóstico neurológico?
+* Usa medicamentos contínuos?
+
+### Bloco B — Queixa principal
+
+* Qual foi a primeira mudança percebida?
+* Quando começou?
+* Foi súbito ou progressivo?
+* Está piorando?
+
+### Bloco C — Memória
+
+* Repete perguntas?
+* Esquece compromissos?
+* Perde objetos frequentemente?
+* Esquece conversas recentes?
+
+### Bloco D — Linguagem
+
+* Dificuldade para encontrar palavras?
+* Troca nomes?
+* Dificuldade para acompanhar conversa?
+
+### Bloco E — Atenção e execução
+
+* Dificuldade para planejar tarefas?
+* Dificuldade para seguir receitas?
+* Confusão com contas?
+* Erros ao tomar remédios?
+
+### Bloco F — Orientação
+
+* Já se perdeu em local conhecido?
+* Confunde datas?
+* Confunde horários?
+
+### Bloco G — Funcionalidade
+
+* Consegue pagar contas?
+* Consegue comprar sozinho?
+* Consegue cuidar da casa?
+* Consegue administrar remédios?
+* Consegue usar celular/banco?
+
+### Bloco H — Comportamento
+
+* Apatia?
+* Irritabilidade?
+* Desconfiança?
+* Mudança de personalidade?
+* Alucinações?
+* Desinibição?
+
+### Bloco I — Confundidores
+
+* Sono ruim?
+* Depressão?
+* Ansiedade?
+* Luto?
+* Dor?
+* Infecção recente?
+* Queda recente?
+* Álcool?
+* Medicamentos sedativos?
+* Problema auditivo/visual?
+
+### Bloco J — Segurança
+
+* Já esqueceu fogão ligado?
+* Já se perdeu?
+* Já caiu?
+* Já tomou remédio errado?
+* Já teve prejuízo financeiro?
+* Há risco de dirigir?
+
+## 20. Critério simples de classificação
+
+Para MVP, use regras determinísticas, não machine learning.
+
+Exemplo:
+
+```text
+Nível 0 — Sem alerta evidente
+- Queixas leves
+- Sem progressão clara
+- Sem impacto funcional
+- Sem sinais de segurança
+
+Nível 1 — Atenção
+- Queixas recorrentes
+- Pouco ou nenhum impacto funcional
+- Possíveis fatores confundidores presentes
+
+Nível 2 — Avaliação recomendada
+- Sintomas progressivos
+- Impacto funcional leve/moderado
+- Queixa percebida por familiar
+- Dificuldade com finanças, remédios ou tarefas
+
+Nível 3 — Avaliação com prioridade
+- Mudança súbita
+- Risco de segurança
+- Perda funcional importante
+- Confusão significativa
+- Se perder em locais conhecidos
+- Erro relevante com medicação
+- Alucinações ou alteração comportamental importante
+```
+
+## 21. Uso seguro da IA
+
+A IA pode:
+
+* resumir respostas abertas;
+* organizar linha do tempo;
+* transformar texto livre em tópicos;
+* gerar relatório em linguagem clara;
+* sugerir perguntas para o médico;
+* explicar diferença entre triagem e diagnóstico;
+* revisar tom para evitar alarmismo.
+
+A IA não deve:
+
+* calcular diagnóstico;
+* criar score clínico não validado;
+* interpretar exame;
+* decidir prioridade sozinha;
+* recomendar medicamento;
+* sugerir tratamento;
+* dizer que a pessoa tem Alzheimer;
+* substituir regras clínicas determinísticas.
+
+No MVP, a classificação deve vir do **Risk Triage Engine**, não do LLM.
+
+## 22. Auditoria e explicabilidade
+
+Cada resultado deve armazenar:
+
+* versão do questionário;
+* versão das regras;
+* respostas usadas;
+* fatores que elevaram prioridade;
+* versão do prompt;
+* modelo de IA usado;
+* data/hora;
+* aceite de consentimento;
+* versão do texto de aviso;
+* relatório gerado.
+
+A explicação ao usuário deve ser simples:
+
+> “Este resultado foi gerado porque você relatou piora progressiva, repetição frequente de perguntas e dificuldade recente para administrar medicamentos.”
+
+## 23. Pontos regulatórios
+
+Aqui há um ponto muito importante: dependendo da alegação, isso pode ser entendido como Software as a Medical Device. A RDC nº 657/2022 da Anvisa trata da regularização de Software como Dispositivo Médico, incluindo software utilizado para finalidades médicas, inclusive SaaS e aplicativos móveis quando se enquadram na definição. ([Anvisa Legis][4])
+
+Para reduzir risco no MVP:
+
+* posicione como ferramenta educativa e organizadora;
+* não declare diagnóstico;
+* não declare predição;
+* não declare decisão clínica automatizada;
+* tenha revisão de profissional de saúde;
+* tenha termos claros;
+* documente finalidade;
+* consulte especialista regulatório antes de uso comercial.
+
+## 24. Métricas de sucesso
+
+### Produto
+
+* taxa de conclusão do questionário;
+* tempo médio para completar;
+* taxa de download do relatório;
+* número de relatórios compartilhados com médico;
+* satisfação do usuário;
+* clareza percebida.
+
+### Clínica/validação
+
+* profissionais consideraram o relatório útil?
+* o relatório reduziu tempo de anamnese?
+* a classificação de prioridade concorda com avaliação profissional?
+* houve excesso de alarmismo?
+* houve falso conforto?
+
+### Segurança
+
+* número de respostas com risco crítico;
+* número de usuários que entenderam que não é diagnóstico;
+* taxa de solicitações de exclusão de dados;
+* incidentes de privacidade.
+
+## 25. Estratégia de validação
+
+### Fase 1 — Validação conceitual
+
+Converse com:
+
+* 3 neurologistas;
+* 3 geriatras;
+* 3 neuropsicólogos;
+* 5 familiares/cuidadores;
+* 5 pessoas acima de 60 anos.
+
+Objetivo: validar se o relatório é útil.
+
+### Fase 2 — Protótipo navegável
+
+Figma ou app simples.
+
+Testar:
+
+* clareza das perguntas;
+* medo gerado pela linguagem;
+* compreensão do aviso;
+* utilidade do relatório.
+
+### Fase 3 — MVP funcional
+
+Web app com questionário, regras e PDF.
+
+### Fase 4 — Piloto com clínica
+
+Aplicar antes da consulta e pedir feedback do profissional.
+
+### Fase 5 — Estudo observacional
+
+Comparar classificação do sistema com avaliação clínica profissional.
+
+## 26. Roadmap em fases
+
+### Fase 0 — Discovery
+
+* entrevistas;
+* definição de escopo;
+* revisão clínica;
+* revisão jurídica;
+* protótipo.
+
+### Fase 1 — MVP seguro
+
+* questionário;
+* regras determinísticas;
+* classificação de prioridade;
+* relatório PDF;
+* consentimento;
+* LGPD básica;
+* IA apenas para resumo.
+
+### Fase 2 — Profissional de saúde
+
+* portal da clínica;
+* intake pré-consulta;
+* painel de avaliações;
+* feedback clínico;
+* revisão de relatório.
+
+### Fase 3 — Validação científica
+
+* estudo de concordância;
+* ajustes por escolaridade;
+* métricas de sensibilidade;
+* parceria acadêmica.
+
+### Fase 4 — IA avançada
+
+* sumarização longitudinal;
+* assistente para cuidador;
+* análise de relatos recorrentes;
+* personalização educacional.
+
+### Fase 5 — Integrações
+
+* prontuário;
+* telemedicina;
+* operadoras;
+* atenção primária;
+* dispositivos/wearables, se fizer sentido.
+
+## 27. Arquitetura conceitual inicial
+
+```text
+Frontend Web
+  |
+  |-- Patient/Caregiver Portal
+  |-- Professional Portal
+  |
+API Gateway / Backend API
+  |
+Application Layer
+  |
+  |-- Screening Service
+  |-- Questionnaire Service
+  |-- Consent Service
+  |-- Risk Triage Engine
+  |-- Report Service
+  |-- AI Summary Service
+  |-- Audit Service
+  |
+Domain Layer
+  |
+  |-- PatientProfile
+  |-- ScreeningSession
+  |-- CognitiveSymptom
+  |-- FunctionalImpact
+  |-- ConfoundingFactor
+  |-- WarningSign
+  |-- TriageResult
+  |-- MedicalReport
+  |-- ConsentRecord
+  |
+Infrastructure
+  |
+  |-- PostgreSQL
+  |-- Object Storage
+  |-- Redis
+  |-- Message Broker
+  |-- LLM Provider
+  |-- PDF Generator
+  |-- OpenTelemetry
+  |-- Audit Logs
+```
+
+Para seu portfólio, isso conversa muito bem com:
+
+* .NET 10;
+* Clean Architecture;
+* DDD tático;
+* workers;
+* Outbox Pattern;
+* auditoria;
+* LGPD by design;
+* IA com guardrails;
+* geração de PDF;
+* observabilidade;
+* arquitetura orientada a eventos.
+
+## 28. Eventos de domínio
+
+```text
+ScreeningStarted
+ConsentGranted
+PatientProfileCompleted
+QuestionnaireCompleted
+WarningSignsDetected
+TriageCalculated
+AiSummaryGenerated
+MedicalReportGenerated
+ReportDownloaded
+ConsentRevoked
+DataDeletionRequested
+```
+
+## 29. Modelo de domínio inicial
+
+```text
+ScreeningSession
+- Id
+- RespondentType
+- PatientProfile
+- ConsentRecord
+- Answers
+- WarningSigns
+- ConfoundingFactors
+- TriageResult
+- Report
+- CreatedAt
+- CompletedAt
+
+TriageResult
+- PriorityLevel
+- Reasons
+- RecommendedNextStep
+- Disclaimer
+- RuleVersion
+
+MedicalReport
+- ExecutiveSummary
+- Timeline
+- CognitiveFindings
+- FunctionalFindings
+- BehavioralFindings
+- ConfoundingFactors
+- WarningSigns
+- QuestionsForDoctor
+```
+
+## 30. Riscos principais
+
+| Risco                             | Gravidade | Mitigação                                                            |
+| --------------------------------- | --------: | -------------------------------------------------------------------- |
+| Usuário entender como diagnóstico |      Alta | Linguagem clara e avisos repetidos                                   |
+| Alarmismo                         |      Alta | Comunicação cuidadosa                                                |
+| Falso negativo                    |      Alta | Não dizer “está tudo bem”; dizer “sem alerta evidente nas respostas” |
+| LGPD                              |      Alta | Consentimento, minimização, exclusão, criptografia                   |
+| SaMD/Anvisa                       |      Alta | Cuidado com alegações médicas                                        |
+| Viés por escolaridade             |      Alta | Perguntas simples e validação brasileira                             |
+| IA gerar texto inadequado         |      Alta | Guardrails, prompts versionados, termos proibidos                    |
+| Falta de validação clínica        |      Alta | Piloto com profissionais                                             |
+| Excesso de escopo                 |     Média | Começar com relatório e triagem                                      |
+
+## 31. Sugestões de nome
+
+Mais profissionais:
+
+* **Clareza Cognitiva**
+* **CognitivaCare**
+* **Memória Clara**
+* **NeuroSinais**
+* **Cuidar da Memória**
+* **CognitiveCare BR**
+* **Mente em Foco**
+* **Sinais Cognitivos**
+
+Meu favorito para o Brasil:
+
+## **Clareza Cognitiva**
+
+Porque não promete diagnóstico, soa humano, sério e compreensível.
+
+## 32. Conclusão crítica
+
+O melhor primeiro passo **não é programar**.
+
+O melhor primeiro passo é construir um **protótipo de relatório**.
+
+Antes de API, banco, IA e arquitetura, você precisa responder:
+
+> “Esse relatório seria útil para uma consulta real?”
+
+Então eu faria nesta ordem:
+
+1. Criar o modelo do relatório.
+2. Criar o questionário que alimenta esse relatório.
+3. Validar com 3 a 5 profissionais.
+4. Ajustar linguagem e riscos.
+5. Criar protótipo navegável.
+6. Só depois construir o MVP técnico.
+
+A ideia vale a pena, mas a versão vencedora não é uma IA que “prevê Alzheimer”.
+
+A versão vencedora é:
+
+> **Uma plataforma segura de triagem cognitiva e relatório clínico assistido por IA, focada em reduzir atraso diagnóstico, organizar a jornada da família e apoiar profissionais de saúde com informação estruturada.**
+
+[1]: https://pubmed.ncbi.nlm.nih.gov/38934362/?utm_source=chatgpt.com "Revised criteria for diagnosis and staging of Alzheimer's disease"
+[2]: https://bvsms.saude.gov.br/bvs/publicacoes/relatorio_nacional_demencia_brasil.pdf?utm_source=chatgpt.com "Relatório Nacional sobre a Demência:"
+[3]: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm?utm_source=chatgpt.com "L13709 - Planalto"
+[4]: https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000657&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=000&tipo=RDC&valorAno=2022&utm_source=chatgpt.com "Resolução da Diretoria Colegiada - RDC nº 657, de 24/03/2022"
