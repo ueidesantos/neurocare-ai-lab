@@ -1,0 +1,189 @@
+Sim — **faz sentido para seu aprendizado em IA generativa** e **pode contribuir com a sociedade**, desde que você mantenha o projeto no território correto: **triagem, orientação e organização clínica**, não diagnóstico.
+
+## 1. Faz sentido para aprender IA generativa?
+
+**Sim. Muito.**
+
+Esse projeto é melhor do que um “chatbot genérico”, porque força você a aplicar IA generativa dentro de um cenário real, sensível, regulado e com responsabilidade. Isso te obriga a aprender não só “como chamar uma API de LLM”, mas como construir uma solução de IA com arquitetura, governança, segurança e limites claros.
+
+Você conseguiria praticar conceitos importantes como:
+
+| Conceito                | Como aparece no projeto                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| Prompt engineering      | gerar resumo clínico, perguntas para consulta e linguagem cuidadosa                |
+| Structured output       | transformar respostas em JSON estruturado para relatório                           |
+| Guardrails              | impedir diagnóstico, alarmismo e recomendações médicas indevidas                   |
+| RAG                     | consultar conteúdos validados sobre saúde, demência, sinais de alerta e orientação |
+| Function calling/tools  | acionar geração de PDF, classificação de prioridade, checklist clínico             |
+| Orquestração de IA      | separar coleta, regras, resumo, relatório e revisão de linguagem                   |
+| Human-in-the-loop       | permitir validação por profissional de saúde                                       |
+| Avaliação de LLM        | medir se a IA gerou texto seguro, correto e não diagnóstico                        |
+| Observabilidade         | rastrear prompts, respostas, versões e erros                                       |
+| Segurança e privacidade | lidar com dados sensíveis de saúde                                                 |
+| Arquitetura enterprise  | API, workers, eventos, auditoria, LGPD, relatórios, logs                           |
+
+O ponto mais forte: você aprenderia **IA aplicada a produto real**, não IA de demonstração.
+
+## 2. Esse projeto é bom para Engenharia de Software?
+
+**Sim. Ele é excelente para demonstrar maturidade técnica.**
+
+Ele exigiria:
+
+* Clean Architecture;
+* DDD tático;
+* regras de negócio determinísticas;
+* separação entre IA e decisão clínica;
+* versionamento de prompts;
+* versionamento de questionários;
+* auditoria;
+* geração de relatórios;
+* segurança de dados;
+* observabilidade;
+* testes automatizados;
+* workers/background services;
+* arquitetura orientada a eventos;
+* LGPD by design.
+
+Para portfólio, isso é muito mais forte do que “clone de ChatGPT” ou “assistente com IA”.
+
+O diferencial é mostrar que você entende uma coisa rara:
+
+> IA generativa em sistemas reais precisa de limites, rastreabilidade, validação e responsabilidade.
+
+## 3. Consegue contribuir com a sociedade?
+
+**Sim, mas de forma indireta e responsável.**
+
+A contribuição social não seria “detectar Alzheimer”. Seria ajudar pessoas e famílias a:
+
+* perceber sinais que merecem atenção;
+* organizar sintomas;
+* reduzir confusão e medo;
+* chegar melhor preparadas à consulta;
+* não ignorar mudanças funcionais importantes;
+* entender que nem todo esquecimento é Alzheimer;
+* buscar ajuda profissional mais cedo;
+* produzir um relatório claro para o médico.
+
+Isso é relevante no Brasil porque há envelhecimento populacional, subdiagnóstico e dificuldade de acesso a especialistas. O Relatório Nacional sobre Demência do Ministério da Saúde estimou que cerca de **8,5% da população idosa brasileira convive com demência**, e há evidências de forte subdiagnóstico no país. ([Serviços e Informações do Brasil][1])
+
+Então, sim: existe uma dor social real.
+
+Mas a contribuição só é legítima se você não ultrapassar a fronteira médica.
+
+## 4. Onde mora o risco?
+
+O risco aparece quando o produto começa a parecer que “prediz Alzheimer”.
+
+Você deve evitar:
+
+* “calcule seu risco de Alzheimer”;
+* “descubra se você tem Alzheimer”;
+* “predição de demência por IA”;
+* “diagnóstico precoce automatizado”;
+* “probabilidade individual de doença”;
+* “recomendação de exames” em tom prescritivo.
+
+A forma segura é:
+
+> “Organize sinais cognitivos e funcionais para apoiar uma conversa com profissional de saúde.”
+
+Também há risco regulatório. A Anvisa regula Software como Dispositivo Médico pela RDC nº 657/2022, e sistemas com finalidade médica podem cair nesse enquadramento dependendo das alegações e funcionalidades. ([Anvisa Legis][2])
+
+Além disso, dados de saúde são dados pessoais sensíveis pela LGPD, exigindo cuidado forte com consentimento, finalidade, segurança, minimização e exclusão. ([Planalto][3])
+
+## 5. É ambicioso demais para começar sozinho?
+
+**A versão completa, sim.**
+
+Uma plataforma real de saúde, validada clinicamente, com uso comercial e promessa de triagem médica é grande demais para começar sozinho sem apoio de especialistas.
+
+Mas uma versão acadêmica, técnica e responsável é totalmente possível.
+
+O recorte correto seria:
+
+> **MVP acadêmico de triagem cognitiva educativa com geração de relatório estruturado assistido por IA, sem diagnóstico e sem predição clínica.**
+
+Esse recorte é viável para você construir sozinho como software engineer.
+
+## 6. Melhor versão mínima para construir primeiro
+
+Eu construiria esta versão:
+
+## **MVP 1 — Gerador de Relatório Cognitivo para Consulta**
+
+Funcionalidades mínimas:
+
+1. Tela de aviso: “não é diagnóstico”.
+2. Consentimento simples.
+3. Questionário estruturado para familiar/cuidador.
+4. Perguntas sobre memória, funcionalidade, comportamento e fatores confundidores.
+5. Motor de regras determinístico classificando apenas prioridade de atenção.
+6. IA gerando resumo narrativo cuidadoso.
+7. Relatório PDF para levar ao médico.
+8. Logs de auditoria.
+9. Versionamento de prompt e regras.
+
+A IA não decide o risco.
+A IA apenas **resume, organiza e melhora a comunicação**.
+
+Essa separação é essencial.
+
+## 7. Primeiro passo mais inteligente
+
+Não comece pelo código.
+
+Comece criando estes três artefatos:
+
+1. **Modelo do relatório final**
+2. **Questionário que alimenta o relatório**
+3. **Matriz de regras de prioridade**
+
+Depois valide informalmente com pelo menos:
+
+* 1 neurologista ou geriatra;
+* 1 psicólogo/neuropsicólogo, se possível;
+* 2 ou 3 pessoas que cuidam de idosos.
+
+Só depois implemente.
+
+## 8. Vale para portfólio e carreira?
+
+Sim. Muito.
+
+Esse projeto te posiciona como alguém que entende:
+
+* IA aplicada;
+* produto real;
+* arquitetura;
+* ética;
+* domínio complexo;
+* software sensível;
+* responsabilidade técnica;
+* engenharia além do CRUD.
+
+Para GitHub/LinkedIn, o posicionamento ideal seria:
+
+> **AI-assisted cognitive screening lab built with .NET, focused on safe symptom organization, structured health reports, responsible AI guardrails, privacy-by-design and human-centered healthcare workflows.**
+
+Em português:
+
+> **Laboratório de IA aplicada à saúde digital para triagem cognitiva responsável, organização de sinais de alerta e geração de relatório estruturado para apoio à avaliação profissional.**
+
+## Respostas diretas
+
+| Pergunta                                 | Resposta                                                                                                                       |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Faz sentido para aprender IA generativa? | **Sim.** Porque envolve prompts, RAG, guardrails, structured output, auditoria, avaliação de LLM e arquitetura de IA aplicada. |
+| Consegue contribuir com a sociedade?     | **Sim.** Desde que ajude a organizar sinais e orientar busca profissional, sem diagnosticar ou prometer predição.              |
+| É adequado para sua pós?                 | **Sim.** É um excelente projeto acadêmico/técnico em IA aplicada.                                                              |
+| É adequado para MVP real?                | **Sim, com escopo reduzido e validação profissional.**                                                                         |
+| É arriscado?                             | **Sim.** Principalmente se comunicar diagnóstico, risco individual ou recomendação médica.                                     |
+| Primeiro passo                           | Criar relatório, questionário e matriz de regras antes do código.                                                              |
+| Versão mínima                            | Questionário + motor de prioridade + resumo por IA + PDF para consulta.                                                        |
+| Vale a pena seguir?                      | **Sim, mas como triagem educativa e relatório assistido por IA, não como predição de Alzheimer.**                              |
+
+[1]: https://www.gov.br/saude/pt-br/assuntos/noticias/2024/setembro/relatorio-nacional-sobre-a-demencia-estima-que-cerca-de-8-5-da-populacao-idosa-convive-com-a-doenca?utm_source=chatgpt.com "Relatório Nacional sobre a Demência estima que cerca de 8,5 ..."
+[2]: https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000657&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=000&tipo=RDC&valorAno=2022&utm_source=chatgpt.com "Resolução da Diretoria Colegiada - RDC nº 657, de 24/03/2022"
+[3]: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm?utm_source=chatgpt.com "L13709 - Planalto"
