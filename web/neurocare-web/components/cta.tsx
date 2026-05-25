@@ -54,7 +54,7 @@ export function Cta() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="mailto:contato@neurocare-ai-lab.dev"
+              href="wa.me/5511993652951"
               className="group inline-flex h-12 w-full items-center justify-between gap-3 rounded-md border border-background/20 px-5 text-sm font-medium text-background transition-colors hover:bg-background/10 lg:w-auto"
             >
               <span className="flex items-center gap-2.5">
