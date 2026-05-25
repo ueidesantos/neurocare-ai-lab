@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
+
+const googleAnalyticsId = "G-PM2W0V87DH"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,7 +69,22 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} bg-background`}
     >
-      <body className="font-sans text-foreground antialiased">{children}</body>
+      <body className="font-sans text-foreground antialiased">
+        {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
+      </body>
     </html>
   )
 }
