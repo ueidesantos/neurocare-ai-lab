@@ -1,44 +1,79 @@
-# Limites Clínicos e Motor de Triagem
+# Limites Clínicos e Éticos - Clareza Cognitiva
 
-Este documento define as regras de negócio para a triagem de sinais de declínio cognitivo, garantindo uma abordagem determinística e segura.
-
-## 1. Classificação de Prioridade (Níveis 0-3)
-
-O motor de triagem (Triage Engine) deve utilizar regras C# puras para definir o nível de atenção, sem depender da interpretação subjetiva de um LLM para a classificação final.
-
-| Nível | Classificação | Critérios Iniciais (Exemplos) |
-| :--- | :--- | :--- |
-| **0** | **Sem Alerta Evidente** | Queixas subjetivas leves, sem impacto funcional e sem sinais de segurança. |
-| **1** | **Atenção** | Sintomas recorrentes, mas sem comprometimento claro das Atividades de Vida Diária (AVDs). |
-| **2** | **Avaliação Recomendada** | Presença de declínio progressivo com impacto leve/moderado em AVDs (ex: finanças, remédios). |
-| **3** | **Avaliação Prioritária** | Sinais de alerta graves, risco de segurança, mudança súbita de comportamento ou confusão severa. |
-
-## 2. Domínios Cognitivos Monitorados
-- Memória (Recente, Retenção, Evocação).
-- Linguagem (Fluidez, Nomeação).
-- Orientação (Tempo, Espaço).
-- Atenção e Funções Executivas (Planejamento, Julgamento).
-
-## 3. Fatores Confundidores
-O sistema deve identificar e reportar fatores que podem mimetizar ou agravar o declínio cognitivo, alertando o médico para investigação:
-- Problemas de Sono (Insônia, Apneia).
-- Humor e Saúde Mental (Depressão, Ansiedade, Luto).
-- Condições Sensoriais (Audição, Visão).
-- Medicamentos em uso.
-- Infecções recentes.
-
-## 4. Sinais de Alerta (Red Flags)
-A presença de qualquer um destes sinais eleva automaticamente a prioridade para o Nível 3:
-- Esquecer o fogão ligado ou riscos de incêndio.
-- Perder-se em locais conhecidos.
-- Erros graves na administração de medicamentos.
-- Prejuízos financeiros por falta de julgamento.
-- Alucinações ou agressividade súbita.
-
-## 5. Diretrizes para Resumos de IA
-- **Tom:** Profissional e cauteloso.
-- **Guardrails:** Bloqueio de termos como "provável Alzheimer", "diagnóstico de demência", "cura", ou prescrições diretas.
-- **Disclaimer Obrigatório:** Todo resumo deve vir acompanhado do aviso de que não constitui diagnóstico.
+Este documento detalha as fronteiras de atuação, restrições éticas e diretrizes de comunicação do projeto **Clareza Cognitiva**. Como um laboratório educacional de IA Responsável, a aderência a estes limites é obrigatória.
 
 ---
-*A decisão clínica final cabe sempre ao profissional de saúde habilitado.*
+
+## 1. Posicionamento Fundamental
+O **Clareza Cognitiva** é uma ferramenta de **apoio à jornada clínica**. Ele atua exclusivamente na triagem, organização de histórico e orientação educativa.
+
+### O que o sistema É:
+- Um assistente de organização de relatos para familiares e pacientes.
+- Um gerador de relatórios estruturados para facilitar a consulta médica.
+- Um motor de triagem baseado em regras determinísticas para identificar sinais de alerta.
+
+### O que o sistema NÃO É:
+- Uma ferramenta de diagnóstico.
+- Um substituto para a avaliação médica ou neuropsicológica.
+- Um calculador de probabilidade de doenças.
+
+---
+
+## 2. Restrições Éticas Inegociáveis (Safety Guardrails)
+
+1. **NUNCA Diagnosticar:** O sistema jamais deve emitir frases determinísticas como "Você tem Alzheimer", "Este quadro é demência" ou "A probabilidade de doença é de X%".
+2. **NUNCA Prescrever:** Não sugerir medicamentos, suplementos ou exames específicos em tom de ordem. Use sempre: *"Converse com seu médico sobre a necessidade de..."*.
+3. **Tom de Voz:** Deve ser acolhedor, profissional e cauteloso. Evite termos alarmistas (ex: "grave", "crítico", "perigoso") sem contexto clínico estruturado.
+4. **Prevenção de Falsa Segurança:** Nunca diga "Está tudo bem" ou "Não há risco". Use: *"Não foram identificados alertas relevantes nas respostas fornecidas neste momento"*.
+
+---
+
+## 3. Anti-Escopo (O que não fazemos)
+- Diagnóstico automático de Alzheimer ou outras demências.
+- Interpretação autônoma de biomarcadores (exames de sangue, líquor ou imagem).
+- Decisões clínicas baseadas puramente em modelos de linguagem (LLM).
+- Recomendação direta de conduta terapêutica.
+
+---
+
+## 4. Diretrizes de Comunicação de Risco
+A comunicação deve focar em **necessidade de avaliação** e não em **presença de doença**.
+
+| Termo a Evitar | Termo Preferencial |
+| :--- | :--- |
+| "Alto risco de Alzheimer" | "Necessidade de avaliação profissional prioritária" |
+| "Sinais graves" | "Sinais de alerta que justificam investigação" |
+| "Chance de ter demência" | "Perfil compatível com necessidade de investigação clínica" |
+| "Exame confirma doença" | "Ponto relevante para discussão com o especialista" |
+
+---
+
+## 5. Triagem Determinística vs. IA Generativa
+Para garantir a segurança e explicabilidade, a lógica de triagem segue estes princípios:
+
+- **Decisões de Prioridade:** São tomadas por um motor de regras (if/else/patterns) em C#, baseado em escalas validadas e sinais de alerta pré-definidos. **A IA Generativa nunca decide o nível de prioridade.**
+- **Papel da IA:** A IA é usada apenas para:
+    - Sumarizar relatos livres.
+    - Organizar a linha do tempo dos sintomas.
+    - Melhorar a clareza da comunicação no relatório.
+    - Sugerir perguntas para o paciente levar à consulta.
+
+---
+
+## 6. Sinais de Alerta Críticos
+Caso algum destes sinais seja identificado, o sistema deve orientar busca por avaliação profissional com prioridade:
+- Mudança súbita no estado de confusão mental (Delirium).
+- Riscos imediatos de segurança (ex: esquecer fogão ligado, se perder).
+- Alucinações ou alterações comportamentais agudas.
+- Impacto severo e recente na autonomia (finanças, medicação).
+
+---
+
+## 7. Conformidade e Regulação (SaMD)
+Este software é posicionado como uma ferramenta educativa e de suporte administrativo à consulta. Para evitar o enquadramento não planejado como dispositivo médico (SaMD - Software as a Medical Device) sob a RDC 657/2022 da Anvisa no estágio atual:
+- Não declaramos finalidade diagnóstica ou preditiva.
+- Mantemos o profissional de saúde como o único tomador de decisão clínica.
+- Documentamos claramente que o relatório é um apoio à anamnese.
+
+---
+**Clareza Cognitiva** - *Compromisso com a IA Ética e Responsável na Saúde.*

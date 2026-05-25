@@ -3,6 +3,7 @@
 > **IMPORTANTE: AVISO DE IA RESPONSÁVEL**
 > Este documento é um relatório de apoio gerado com o auxílio de Inteligência Artificial para fins educacionais e de laboratório. **NÃO É UM DIAGNÓSTICO MÉDICO.**
 > Este sistema não substitui a avaliação de um profissional de saúde qualificado. Ele não calcula probabilidades de doenças (como Alzheimer ou demência) nem recomenda tratamentos.
+> Para entender melhor nossas diretrizes éticas e limites educacionais, consulte o [Disclaimer Educacional completo](../DISCLAIMER.md).
 > O objetivo deste relatório é organizar as observações feitas por familiares/cuidadores para facilitar o diálogo com o médico.
 
 ## 1. Identificação e Contexto

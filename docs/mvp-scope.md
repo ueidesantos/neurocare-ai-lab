@@ -1,39 +1,84 @@
-# Escopo do MVP e Definição de Personas
+# Escopo do MVP - Clareza Cognitiva
 
-O **Clareza Cognitiva** foca em reduzir o caos da jornada diagnóstica, ajudando famílias a organizar sinais cognitivos e funcionais para uma consulta médica mais produtiva.
+Este documento detalha o escopo do Produto Mínimo Viável (MVP) para o projeto **Clareza Cognitiva**, um laboratório de IA Generativa e Engenharia de Software focado em triagem cognitiva responsável.
 
-## 🎯 Objetivos do MVP
-- **Triagem:** Identificar se os relatos sugerem a necessidade de avaliação profissional.
-- **Organização:** Gerar uma linha do tempo e um resumo estruturado dos sintomas.
-- **Orientação:** Recomendar próximos passos e preparar o usuário para a consulta.
+---
+
+## 🎯 Visão do Produto
+
+O **Clareza Cognitiva** é uma plataforma de triagem cognitiva e organização clínica que ajuda pacientes, familiares e profissionais a identificar sinais de alerta, estruturar a história dos sintomas e levar um relatório útil para avaliação médica.
+
+**O que o projeto é:** Um laboratório educacional de IA Responsável.
+**O que o projeto NÃO é:** Um dispositivo médico de diagnóstico ou uma ferramenta de predição de doenças.
+
+---
+
+## ❓ Statement do Problema
+
+Famílias percebem mudanças cognitivas, mas enfrentam atrasos no diagnóstico por não saberem diferenciar o envelhecimento normal de sinais iniciais de declínio. No Brasil, estima-se que cerca de 80% dos casos de demência não são diagnosticados, e a jornada diagnóstica é frequentemente caótica e desorganizada.
+
+---
 
 ## 👤 Personas
 
-### Mariana (Filha e Cuidadora)
-- **Contexto:** Percebe mudanças na memória e comportamento da mãe de 72 anos.
-- **Dor:** Incerteza se os sinais são "da idade" ou algo grave; dificuldade em explicar tudo ao médico em pouco tempo de consulta.
-- **Job to be Done:** "Organizar os fatos que observei para saber se devo me preocupar e como ajudar o médico no diagnóstico."
+- **Mariana (Familiar Cuidador):** Percebe mudanças na mãe e precisa saber se deve procurar um médico e como organizar os relatos.
+- **Roberto (Paciente):** Sente lapsos de memória e busca orientação cuidadosa sem alarmismo.
+- **Dra. Ana (Profissional de Saúde):** Recebe relatos desorganizados e deseja um resumo clínico estruturado para otimizar a consulta.
 
-### Roberto (Paciente)
-- **Contexto:** Homem de 67 anos que sente lapsos de memória ocasionais.
-- **Dor:** Ansiedade e medo de ter Alzheimer.
-- **Job to be Done:** "Saber se meus esquecimentos justificam uma avaliação sem entrar em pânico prematuro."
+---
 
-### Dra. Ana (Médica Especialista)
-- **Contexto:** Neurologista ou Geriatra que recebe familiares com relatos desorganizados.
-- **Dor:** Perda de tempo clínico tentando reconstruir a linha do tempo e o impacto funcional.
-- **Job to be Done:** "Ter acesso a um resumo clínico objetivo e estruturado antes de iniciar a anamnese presencial."
+## 🚀 Escopo Funcional (MVP)
 
-## 🛠️ Funcionalidades do MVP (Escopo)
-1. **Fluxo de Triagem:** Questionários adaptados para paciente ou familiar.
-2. **Consentimento LGPD:** Coleta formal de aceite para tratamento de dados sensíveis.
-3. **Identificação de Sinais de Alerta:** Verificação de riscos de segurança e piora súbita.
-4. **Resumo Narrativo por IA:** Transformação de respostas livres em texto clínico estruturado.
-5. **Classificação Determinística:** Níveis de prioridade de 0 a 3 baseados em regras C#.
-6. **Relatório em PDF:** Documento pronto para ser levado à consulta.
+### 1. Governança e Segurança
+- Coleta de consentimento explícito e avisos de não diagnóstico (LGPD).
+- Política de privacidade e termos de uso claros.
+- Trilha de auditoria para aceites e gerações de relatórios.
 
-## 🚫 Anti-escopo (O que NÃO faremos)
-- Diagnóstico automático de patologias.
-- Cálculo de probabilidade individual de Alzheimer.
-- Prescrição de medicamentos ou exames.
-- Recomendações baseadas puramente em decisão de IA (sem regras determinísticas).
+### 2. Coleta de Dados (Questionários)
+- Questionários estruturados para paciente e familiar/cuidador.
+- Avaliação de domínios cognitivos: Memória, Linguagem, Orientação, Atenção e Execução.
+- Avaliação de impacto funcional (Atividades de Vida Diária).
+- Identificação de **Fatores Confundidores** (sono, humor, medicamentos, audição/visão).
+- Identificação de **Sinais de Alerta** (segurança, piora súbita).
+
+### 3. Motor de Triagem Determinístico
+- Classificação de prioridade baseada em regras em código C# (não no LLM).
+- Níveis de Atenção:
+  - **0. Sem alerta evidente:** Sintomas leves sem impacto funcional.
+  - **1. Atenção:** Queixas recorrentes com pouco impacto funcional.
+  - **2. Avaliação recomendada:** Sintomas progressivos e impacto funcional claro.
+  - **3. Avaliação prioritária:** Sinais de alerta, risco de segurança ou mudança súbita.
+
+### 4. Relatório Clínico Estruturado
+- Geração de relatório em PDF para levar ao médico.
+- Inclusão de linha do tempo dos sintomas e resumo dos achados.
+- Sugestões de pontos para discutir com o profissional de saúde.
+
+### 5. IA Generativa Responsável
+- Uso de LLM apenas para resumir relatos livres e melhorar a fluidez da comunicação no relatório.
+- Implementação de **Guardrails** para evitar linguagem diagnóstica, alarmismo ou prescrições.
+- Versionamento de prompts e auditoria de saídas.
+
+---
+
+## 🚫 Anti-escopo (O que não faremos)
+
+- **Diagnóstico automático:** O sistema nunca dirá "Você tem Alzheimer".
+- **Cálculo de probabilidade:** Não forneceremos porcentagens de risco de doenças.
+- **Prescrição médica:** Não recomendaremos exames específicos ou medicamentos.
+- **Decisão por LLM:** A IA generativa nunca decidirá o nível de prioridade clínica.
+
+---
+
+## 🛠️ Backlog de Engenharia (Épicos)
+
+1. **Foundation & Domain:** Estrutura da Clean Architecture e lógica de domínio.
+2. **Questionnaire Engine:** Motor de questionários e persistência de respostas.
+3. **Report Generation:** Geração de documentos e exportação para PDF.
+4. **Generative AI Integration:** Gateway para LLM e engenharia de prompts.
+5. **AI Safety & Guardrails:** Filtros de saída e validação de termos proibidos.
+6. **Observability & Audit:** Telemetria, logs estruturados e rastreabilidade.
+7. **RAG & Knowledge Base:** (Futuro) Base de conhecimento para apoio à educação em saúde.
+
+---
+*Este documento é evolutivo e deve ser atualizado conforme o desenvolvimento do laboratório.*

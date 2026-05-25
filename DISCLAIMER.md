@@ -1,26 +1,34 @@
-# Disclaimer e Posicionamento Ético
+# Disclaimer Educacional e Uso Responsável de IA
 
-## ⚠️ Aviso Educacional e Não Diagnóstico
+Este repositório, **neurocare-ai-lab**, é um projeto estritamente educacional desenvolvido como parte de estudos de pós-graduação em Inteligência Artificial e Engenharia de Software.
 
-Este projeto, **Clareza Cognitiva (neurocare-ai-lab)**, é um laboratório educacional desenvolvido para fins de estudo em Inteligência Artificial Generativa e Engenharia de Software.
+## ⚠️ Natureza do Projeto
+O sistema **Clareza Cognitiva** é um Protótipo de Produto Mínimo Viável (MVP) simulado. Ele **não é um produto médico, ferramenta de diagnóstico ou dispositivo de saúde**.
 
-**O SISTEMA NÃO É UM DISPOSITIVO MÉDICO E NÃO FORNECE DIAGNÓSTICO.**
+## 🔴 Restrições Importantes
+Este software e seus relatórios associados **NUNCA** devem ser utilizados para:
+1. **Diagnosticar** Alzheimer, demências ou qualquer outra condição clínica.
+2. **Calcular probabilidades** individuais de doenças.
+3. **Prescrever ou recomendar** tratamentos, exames ou medicamentos.
+4. **Substituir** a avaliação, o julgamento ou a consulta com um profissional de saúde qualificado.
 
-### 1. Natureza do Projeto
-- O objetivo deste software é simular um ambiente de triagem e organização de relatos clínicos para apoiar a conversa entre pacientes, familiares e profissionais de saúde.
-- Todas as classificações de prioridade e resumos gerados são baseados em regras determinísticas e modelos de linguagem, e devem ser interpretados apenas como ferramentas de organização, nunca como vereditos clínicos.
+## 🤖 Papel da Inteligência Artificial
+A Inteligência Artificial Generativa é utilizada neste projeto exclusivamente para:
+- Organizar e resumir relatos fornecidos por usuários.
+- Melhorar a clareza da comunicação em relatórios estruturados.
+- Apoiar a formatação de informações para discussão clínica.
 
-### 2. Limites de Atuação
-- **NUNCA** diagnostica Alzheimer, demência ou qualquer outra patologia.
-- **NUNCA** prescreve medicamentos, tratamentos ou exames.
-- **NUNCA** substitui a avaliação clínica presencial realizada por um médico qualificado (neurologista, geriatra, psiquiatra, etc.).
+**Todas as decisões de triagem e priorização são baseadas em regras lógicas determinísticas codificadas e nunca são delegadas exclusivamente à inferência de modelos de linguagem (LLMs).**
 
-### 3. Responsabilidade do Usuário
-- As informações contidas nos relatórios gerados por este sistema devem ser discutidas obrigatoriamente com um profissional de saúde.
-- Em caso de emergência ou sintomas agudos, procure imediatamente um serviço de saúde.
+## 🛡️ Ética e Responsabilidade
+Este projeto segue diretrizes rigorosas de IA Responsável, incluindo:
+- Transparência sobre o uso de IA.
+- Guardrails para evitar linguagem diagnóstica ou alarmista.
+- Foco na privacidade e segurança de dados (LGPD by design).
+- Uso de dados sintéticos para desenvolvimento e testes.
 
-### 4. IA Responsável
-- Este laboratório segue diretrizes rigorosas de IA Responsável, utilizando Guardrails para evitar linguagem diagnóstica e priorizando a transparência sobre como as informações são processadas.
+## 👨‍⚕️ Orientação ao Usuário
+Se você ou alguém próximo apresenta sinais de declínio cognitivo, procure imediatamente um médico especialista (Neurologista, Geriatra ou Psiquiatra). O objetivo deste laboratório é apenas ajudar a organizar informações para que essa consulta seja mais produtiva.
 
 ---
-*Ao utilizar este sistema, você reconhece que compreende sua natureza exclusivamente educacional e de apoio à triagem.*
+*NeuroCare AI Lab - Comprometido com o desenvolvimento ético e educacional de tecnologias em saúde.*
