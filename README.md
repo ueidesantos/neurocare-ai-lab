@@ -8,13 +8,15 @@ Este repositório faz parte de um estudo de pós-graduação em IA e tem como ob
 
 ## ⚠️ Posicionamento Responsável e Ético
 
-Este projeto é **exclusivamente para fins educacionais**. Ele **NUNCA**:
+Este projeto é **exclusivamente para fins educacionais**. Leia o nosso [Disclaimer e Posicionamento Ético](DISCLAIMER.md) completo.
+
+O sistema **NUNCA**:
 - Diagnostica Alzheimer, demência ou qualquer outra condição clínica.
 - Calcula probabilidades individuais de doenças.
 - Recomenda tratamentos ou prescreve exames.
 - Substitui a avaliação de um profissional de saúde qualificado.
 
-O sistema atua na **triagem e organização clínica**, ajudando a identificar sinais de alerta e a estruturar o histórico de sintomas para facilitar a conversa entre pacientes/familiares e profissionais de saúde.
+O sistema atua na **triagem e organização clínica**, ajudando a identificar sinais de alerta e a estruturar o histórico de sintomas para facilitar a conversa entre pacientes/familiares e profissionais de saúde. Todas as operações com dados seguem os princípios da [LGPD](docs/lgpd.md).
 
 ---
 
@@ -37,12 +39,14 @@ Famílias percebem mudanças cognitivas, mas enfrentam atrasos no diagnóstico p
 
 ## 🎯 Escopo do MVP
 
+Consulte o [Escopo do MVP e Definição de Personas](docs/mvp-scope.md) para detalhes.
+
 ### O que o sistema faz:
-- Coleta de consentimento e avisos de não diagnóstico (LGPD).
+- Coleta de consentimento e avisos de não diagnóstico conforme a [LGPD](docs/lgpd.md).
 - Questionários estruturados para paciente e familiar.
-- Identificação de **Sinais de Alerta** e **Fatores Confundidores** (ex: sono, humor).
-- Classificação determinística de prioridade (Sem alerta, Atenção, Avaliação recomendada, Avaliação prioritária).
-- Geração de **Relatório Clínico Estruturado** (PDF) para levar ao médico.
+- Identificação de **Sinais de Alerta** e **Fatores Confundidores** (ex: sono, humor) detalhados nos [Limites Clínicos](docs/clinical/limites-clinicos.md).
+- Classificação determinística de prioridade (Níveis 0-3).
+- Geração de **Relatório Clínico Estruturado** ([Modelo de Relatório](docs/clinical/modelo-relatorio.md)) para levar ao médico.
 - Uso de IA Generativa apenas para resumir relatos e melhorar a comunicação.
 
 ### O que o sistema NÃO faz (Anti-escopo):
