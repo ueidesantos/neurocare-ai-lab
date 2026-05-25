@@ -16,7 +16,7 @@ O sistema **NUNCA**:
 - Recomenda tratamentos ou prescreve exames.
 - Substitui a avaliação de um profissional de saúde qualificado.
 
-Para mais detalhes sobre nossas diretrizes e limites, leia o nosso [Disclaimer Educacional e Uso Responsável de IA](DISCLAIMER.md).
+Para mais detalhes sobre nossas diretrizes e limites, leia o nosso [Disclaimer Educacional e Uso Responsável de IA](DISCLAIMER.md) e o nosso contexto de [Ética Médica e Prudência](docs/ethics/cfm-medical-ethics-context.md).
 
 O sistema atua na **triagem e organização clínica**, ajudando a identificar sinais de alerta e a estruturar o histórico de sintomas para facilitar a conversa entre pacientes/familiares e profissionais de saúde.
 
