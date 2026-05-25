@@ -66,7 +66,7 @@ O projeto utiliza tecnologias modernas e padrões de engenharia de ponta:
 - **Linguagem:** C# / .NET 10 (LTS).
 - **Arquitetura:** Clean Architecture (Separação clara entre Domain, Application, Infrastructure e API).
 - **IA Responsável:** Uso de **Fake AI** para desenvolvimento inicial, guardrails de saída para evitar linguagem diagnóstica e auditoria completa de prompts.
-- **Dados:** Foco em privacidade (LGPD by design) e dados sintéticos para testes.
+- **Dados e Segurança:** Foco em privacidade ([LGPD](docs/lgpd.md) by design), conformidade com [OWASP e Gartner](docs/security-risk-management.md) e uso de dados sintéticos para testes.
 
 ---
 
