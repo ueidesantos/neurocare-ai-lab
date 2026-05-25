@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,10 @@ builder.Services.AddOpenApi();
 
 // Register services from layers
 builder.Services.AddScoped<NeuroCare.Application.Interfaces.IHelloService, NeuroCare.Infrastructure.Services.HelloService>();
+
+// Configure PostgreSQL
+builder.Services.AddDbContext<NeuroCare.Infrastructure.Persistence.ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
