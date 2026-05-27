@@ -1,3 +1,6 @@
+using NeuroCare.Application;
+using NeuroCare.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 // Register services from layers
-builder.Services.AddScoped<NeuroCare.Application.Interfaces.IHelloService, NeuroCare.Infrastructure.Services.HelloService>();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
