@@ -35,7 +35,7 @@ Famílias percebem mudanças cognitivas, mas enfrentam atrasos no diagnóstico p
 - Trilha de auditoria para aceites e gerações de relatórios.
 
 ### 2. Coleta de Dados (Questionários)
-- Questionários estruturados para paciente e familiar/cuidador.
+- Questionários estruturados para paciente e familiar/cuidador (ver [Esquema do Questionário](clinical/questionario-schema.md)).
 - Avaliação de domínios cognitivos: Memória, Linguagem, Orientação, Atenção e Execução.
 - Avaliação de impacto funcional (Atividades de Vida Diária).
 - Identificação de **Fatores Confundidores** (sono, humor, medicamentos, audição/visão).
