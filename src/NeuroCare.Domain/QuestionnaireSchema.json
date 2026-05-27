@@ -1,0 +1,225 @@
+{
+  "version": "1.0",
+  "blocks": [
+    {
+      "id": "context",
+      "title": "Contexto e Perfil",
+      "questions": [
+        {
+          "key": "respondent_type",
+          "text": "Quem está preenchendo este questionário?",
+          "type": "choice",
+          "options": [
+            { "label": "Paciente", "value": "Patient" },
+            { "label": "Familiar/Cuidador", "value": "Caregiver" }
+          ]
+        },
+        {
+          "key": "patient_age",
+          "text": "Qual a idade da pessoa avaliada?",
+          "type": "numeric"
+        },
+        {
+          "key": "education_level",
+          "text": "Qual o nível de escolaridade?",
+          "type": "choice",
+          "options": [
+            { "label": "Analfabeto", "value": "Analfabeto" },
+            { "label": "Fundamental", "value": "Fundamental" },
+            { "label": "Médio", "value": "Médio" },
+            { "label": "Superior", "value": "Superior" }
+          ]
+        },
+        {
+          "key": "previous_diagnosis",
+          "text": "Já existe algum diagnóstico neurológico prévio (ex: AVC, Parkinson)?",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "id": "chief_complaint",
+      "title": "Queixa Principal e Evolução",
+      "questions": [
+        {
+          "key": "complaint_description",
+          "text": "Qual a principal mudança ou preocupação percebida?",
+          "type": "text"
+        },
+        {
+          "key": "onset_type",
+          "text": "Como os sintomas começaram?",
+          "type": "choice",
+          "options": [
+            { "label": "Gradual", "value": "Gradual" },
+            { "label": "Súbito", "value": "Súbito" }
+          ],
+          "triage_trigger": { "value": "Súbito", "level": 3 }
+        },
+        {
+          "key": "symptom_progression",
+          "text": "Os sintomas estão piorando com o tempo?",
+          "type": "choice",
+          "options": [
+            { "label": "Estável", "value": "Estável" },
+            { "label": "Piorando", "value": "Piorando" },
+            { "label": "Oscilando", "value": "Oscilando" }
+          ]
+        },
+        {
+          "key": "symptom_duration",
+          "text": "Há quanto tempo os sinais foram notados?",
+          "type": "choice",
+          "options": [
+            { "label": "< 6 meses", "value": "less_6_months" },
+            { "label": "6-12 meses", "value": "6_12_months" },
+            { "label": "> 1 ano", "value": "more_1_year" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cognitive",
+      "title": "Domínios Cognitivos",
+      "questions": [
+        {
+          "key": "memory_repetition",
+          "text": "A pessoa repete perguntas ou histórias com frequência?",
+          "category": "Memory",
+          "type": "scale"
+        },
+        {
+          "key": "memory_recall",
+          "text": "Esquece conversas recentes ou compromissos?",
+          "category": "Memory",
+          "type": "scale"
+        },
+        {
+          "key": "memory_objects",
+          "text": "Perde objetos em locais incomuns com frequência?",
+          "category": "Memory",
+          "type": "scale"
+        },
+        {
+          "key": "language_words",
+          "text": "Tem dificuldade para encontrar palavras ou trocar nomes?",
+          "category": "Language",
+          "type": "scale"
+        },
+        {
+          "key": "orientation_time",
+          "text": "Confunde o dia da semana, mês ou ano?",
+          "category": "Orientation",
+          "type": "scale"
+        },
+        {
+          "key": "orientation_place",
+          "text": "Já se sentiu desorientado em locais conhecidos?",
+          "category": "Orientation",
+          "type": "scale",
+          "triage_trigger": { "threshold": 2, "level": 2 }
+        },
+        {
+          "key": "executive_planning",
+          "text": "Dificuldade para planejar tarefas (ex: receitas, contas)?",
+          "category": "Execution",
+          "type": "scale"
+        }
+      ],
+      "scale_options": [
+        { "label": "Nunca", "value": 0 },
+        { "label": "Raramente", "value": 1 },
+        { "label": "Às vezes", "value": 2 },
+        { "label": "Frequentemente", "value": 3 }
+      ]
+    },
+    {
+      "id": "functional",
+      "title": "Impacto Funcional",
+      "questions": [
+        {
+          "key": "func_finances",
+          "text": "Precisa de ajuda para gerenciar dinheiro ou pagar contas?",
+          "type": "boolean"
+        },
+        {
+          "key": "func_medication",
+          "text": "Consegue tomar os medicamentos corretamente sozinho?",
+          "type": "boolean",
+          "is_critical": true
+        },
+        {
+          "key": "func_shopping",
+          "text": "Consegue fazer compras de mercado ou farmácia sozinho?",
+          "type": "boolean"
+        },
+        {
+          "key": "func_technology",
+          "text": "Dificuldade nova para usar celular ou banco digital?",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "id": "confounding",
+      "title": "Fatores Confundidores",
+      "questions": [
+        {
+          "key": "factor_sleep",
+          "text": "Possui problemas de sono (insônia, ronco excessivo)?",
+          "type": "boolean"
+        },
+        {
+          "key": "factor_mood",
+          "text": "Sente tristeza persistente ou falta de interesse em atividades?",
+          "type": "boolean"
+        },
+        {
+          "key": "factor_hearing",
+          "text": "Tem dificuldade para ouvir ou usa aparelho auditivo?",
+          "type": "boolean"
+        },
+        {
+          "key": "factor_vision",
+          "text": "Tem dificuldade visual que atrapalha as atividades?",
+          "type": "boolean"
+        },
+        {
+          "key": "factor_isolation",
+          "text": "Passa a maior parte do tempo sozinho ou com pouca interação?",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Sinais de Segurança",
+      "questions": [
+        {
+          "key": "safety_stove",
+          "text": "Já esqueceu o fogão ligado ou situações de risco em casa?",
+          "type": "boolean",
+          "triage_trigger": { "value": true, "level": 3 }
+        },
+        {
+          "key": "safety_lost",
+          "text": "Já se perdeu fora de casa e precisou de ajuda para voltar?",
+          "type": "boolean",
+          "triage_trigger": { "value": true, "level": 3 }
+        },
+        {
+          "key": "safety_hallucination",
+          "text": "Vê ou ouve coisas que outras pessoas não percebem?",
+          "type": "boolean",
+          "triage_trigger": { "value": true, "level": 3 }
+        },
+        {
+          "key": "safety_aggression",
+          "text": "Apresentou episódios recentes de agressividade incomum?",
+          "type": "boolean",
+          "triage_trigger": { "value": true, "level": 3 }
+        }
+      ]
+    }
+  ]
+}
