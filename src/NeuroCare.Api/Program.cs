@@ -1,5 +1,7 @@
 using NeuroCare.Application;
 using NeuroCare.Infrastructure;
+using NeuroCare.Api.Filters;
+using NeuroCare.Application.DTOs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +23,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/hello", (NeuroCare.Application.Interfaces.IHelloService helloService) =>
+var apiGroup = app.MapGroup("/api");
+
+apiGroup.MapGet("/hello", (NeuroCare.Application.Interfaces.IHelloService helloService) =>
 {
     return Results.Ok(helloService.GetHello());
 })
@@ -56,5 +60,12 @@ sessionsGroup.MapPost("/{id:guid}/answers", async (Guid id, NeuroCare.Applicatio
     return result ? Results.NoContent() : Results.NotFound();
 })
 .WithName("SubmitAnswer");
+// Example of how to use the validation filter
+apiGroup.MapPost("/patient-profile", (CreatePatientProfileRequest request) =>
+{
+    return Results.Created($"/api/patient-profile/{Guid.NewGuid()}", request);
+})
+.AddEndpointFilter<ValidationFilter<CreatePatientProfileRequest>>()
+.WithName("CreatePatientProfile");
 
 app.Run();
