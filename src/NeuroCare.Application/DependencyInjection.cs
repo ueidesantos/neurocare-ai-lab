@@ -4,10 +4,9 @@ namespace NeuroCare.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+    public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        // Add Application layer services here
-
+        // Application layer registrations will go here
         return services;
     }
 }

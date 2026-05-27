@@ -6,10 +6,11 @@ namespace NeuroCare.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
         services.AddScoped<IHelloService, HelloService>();
 
+        // Other Infrastructure layer registrations will go here
         return services;
     }
 }
